@@ -7,8 +7,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-
 import java.util.List;
 import java.util.Map;
 
@@ -18,7 +16,6 @@ public class AiAnalysisService {
     @Value("${huggingface.api.key}")
     private String apiKey;
 
-    // ✅ NEW ROUTER ENDPOINT (ONLY THIS WORKS NOW)
     private static final String API_URL =
             "https://router.huggingface.co/v1/chat/completions";
 
@@ -79,10 +76,7 @@ public class AiAnalysisService {
             e.printStackTrace();
             return "AI analysis failed";
         }
-
-
-
-
     }
 }
+
 
